@@ -1,0 +1,34 @@
+version: "2"
+
+networks: 
+  mongo.net:
+    driver: bridge
+
+services:
+  node:
+    image: node
+    user: "node"
+    working_dir: /app/client
+    volumes:
+      - .:/app/client
+    command: "npm run dev"
+    ports:
+      - "19080:8080"
+    networks: 
+      - 'mongo.net'
+    links: 
+      - database:mongodb
+      
+  database:
+    image: mongo
+    restart: always
+    environment:
+        - MONGO_INITDB_DATABASE=td5
+        - MONGO_INITDB_USERNAME=root
+        - MONGO_INITDB_PASSWORD=example
+    volumes:
+        - ./mongo-volume:/data/db
+    ports:
+        - '27017:27017'
+    networks: 
+        - 'mongo.net'

@@ -1,0 +1,37 @@
+{
+  "name": "consoapp",
+  "version": "1.0.0",
+  "description": "A shopping compartor app",
+  "main": "server.js",
+  "scripts": {
+    "start": "ENV=prod node server.js",
+    "dev": "ENV=dev nodemon server.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixleo22/ConsoApp.git"
+  },
+  "author": "Conso App Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixleo22/ConsoApp/issues"
+  },
+  "homepage": "https://github.com/felixleo22/ConsoApp#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "husky": "^4.0.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "ajax": "0.0.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mongodb": "^3.4.1",
+    "node-fetch": "^2.6.0",
+    "twig": "^1.14.0"
+  }
+}
