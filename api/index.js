@@ -8,8 +8,6 @@ const ajax = require('ajax')
 router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
-
-
     var requestOptions = {
     method: 'GET',
     "Content-Type": "application/json",
