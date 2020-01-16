@@ -26,11 +26,12 @@ router.get('/', (req, res) => {
                 rue: element.attributes.ADRESSE,
                 capacite : element.attributes.CAPACITE
             });
-            console.log(element.attributes.ADRESSE)
+            console.log("La requête est un succès !")
 
     });
-
+    res.redirect("/")
 });
+
 })
 
 
