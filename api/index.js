@@ -19,10 +19,15 @@ router.get('/', (req, res) => {
     .then(result =>  {
         tab = [JSON.parse(result).features]
         tab[0].forEach(element => {
-            db.get('parkings').insert({
+            db.get('PARKING').insertOne({
                 nom: element.attributes.NOM,
                 coord: element.geometry,
+                place: element.attributes.PLACES,
+                rue: element.attributes.ADRESSE,
+                capacite : element.attributes.CAPACITE
             });
+            console.log(element.attributes.ADRESSE)
+
     });
 
 });
@@ -32,7 +37,7 @@ router.get('/', (req, res) => {
 
 // router to see all of bdd
 router.get('/bdd', (req, res) => {
-    const cursor = db.get('parkings').find().toArray(function (err,result) { 
+    const cursor = db.get('PARKING').find().toArray(function (err,result) { 
         res.json(result)
     });
 });

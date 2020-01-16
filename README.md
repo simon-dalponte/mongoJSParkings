@@ -1,6 +1,8 @@
 # mongoJSParkings
 lancer la commande docker-compose up -d
 
-Pour généner la bdd pour les parkings il aller dans la route localhost:19080/api (il se peut que la requete pour la bdd prenne un peu de temps, ouvrer la console du navigateur pour voir l'avancé de la requete)
+ensuite mettre en place le dossier node_modules avec npm 
 
-Ensuite pour avoir la carte il faut aller dans la route localhost:19080
+Pour initier la base de donnée il faut se rendre sur la route "localhost:19080/api"
+
+En suite il suffit de se rendre sur l'url "localhost:19080" et il sera afficher la carte avec les place de parking vide
